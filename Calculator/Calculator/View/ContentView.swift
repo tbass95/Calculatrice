@@ -10,15 +10,43 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
+           
             Text("Hello, world!")
+            
+            VStack{
+                HStack {
+                    ForEach(1..<4)  { number in TouchView(number: number)
+                        
+                    }
+                    
+                }
+                  
+                HStack {
+                    ForEach(4..<7)  { number in TouchView(number: number)
+                        
+                    }
+                    
+                }
+                
+                HStack {
+                    ForEach(7..<10)  { number in TouchView(number: number)
+                        
+                    }
+                    
+                }
+                
+            }
+            
+                .navigationTitle("Calculatrice")
+                .navigationBarTitleDisplayMode(.inline)
         }
         .padding()
     }
+    
 }
 
 #Preview {
-    ContentView()
+    NavigationStack {
+        ContentView()
+    }
 }

@@ -13,6 +13,7 @@
 		125A1FB62CCBBCBF00750D3C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 125A1FB52CCBBCBF00750D3C /* Preview Assets.xcassets */; };
 		125A1FC02CCBBCBF00750D3C /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125A1FBF2CCBBCBF00750D3C /* CalculatorTests.swift */; };
 		125A1FDD2CCBC07C00750D3C /* CalculatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125A1FDC2CCBC07C00750D3C /* CalculatorManager.swift */; };
+		12F875F62CCBD0C70045A1C8 /* TouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F875F52CCBD0C70045A1C8 /* TouchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		125A1FC92CCBBCBF00750D3C /* CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITests.swift; sourceTree = "<group>"; };
 		125A1FCB2CCBBCBF00750D3C /* CalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		125A1FDC2CCBC07C00750D3C /* CalculatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorManager.swift; sourceTree = "<group>"; };
+		12F875F52CCBD0C70045A1C8 /* TouchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				125A1FB02CCBBCBD00750D3C /* ContentView.swift */,
+				12F875F52CCBD0C70045A1C8 /* TouchView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12F875F62CCBD0C70045A1C8 /* TouchView.swift in Sources */,
 				125A1FB12CCBBCBD00750D3C /* ContentView.swift in Sources */,
 				125A1FDD2CCBC07C00750D3C /* CalculatorManager.swift in Sources */,
 				125A1FAF2CCBBCBD00750D3C /* CalculatorApp.swift in Sources */,
