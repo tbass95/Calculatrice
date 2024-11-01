@@ -8,37 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var calculatorManager: CalculatorManager = CalculatorManager()
+    
     var body: some View {
         VStack {
-           
-            Text("Hello, world!")
+            
+            Text("Hello World")
             
             VStack{
-                HStack {
-                    ForEach(1..<4)  { number in TouchView(number: number)
-                        
-                    }
-                    
-                }
-                  
-                HStack {
-                    ForEach(4..<7)  { number in TouchView(number: number)
-                        
-                    }
-                    
-                }
+                TouchRow()
+                TouchRow(range: 4..<7)
+                TouchRow(range: 7..<10)
+                OperatorView()
                 
-                HStack {
-                    ForEach(7..<10)  { number in TouchView(number: number)
-                        
-                    }
-                    
-                }
                 
             }
             
-                .navigationTitle("Calculatrice")
-                .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("Calculatrice")
+            .navigationBarTitleDisplayMode(.inline)
         }
         .padding()
     }
@@ -48,5 +36,27 @@ struct ContentView: View {
 #Preview {
     NavigationStack {
         ContentView()
+    }
+}
+
+struct TouchRow: View {
+    var range = 1..<4
+    var body: some View {
+        HStack {
+            ForEach(range){ number in TouchView(number: number)
+                
+            }
+            
+        }
+    }
+}
+
+struct OperatorView: View {
+    var body: some View {
+        HStack {
+            ForEach(CalculatorManager.Operators.allCases, id: \.self){ newOperator in
+                OperatorButtonView(newoperator: newOperator.rawValue)
+            }
+        }
     }
 }
